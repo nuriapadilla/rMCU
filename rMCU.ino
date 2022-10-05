@@ -22,6 +22,8 @@
 int RED=3;
 int GREEN=5;
 int BLUE=6;
+//LED (TIRA DE LEDs)
+int LED=//Quina sortida?;
 //SD
 const int chipSelect=9;
 File datFile;
@@ -53,9 +55,8 @@ void initPIN()
   pinMode(RED,OUTPUT);
   pinMode(GREEN,OUTPUT);
   pinMode(BLUE,OUTPUT);
-  //LED Strip???
-
-    
+  //LED strip
+  pinMode(LED,OUTPUT);
 }
 
 void initSD()
@@ -90,6 +91,7 @@ int getTime()
 {
   // PRE: Res
   // POS: Retornara el temps llegit del modul RTCC
+ 
 }
 
 void guardarSD(int temps, uint8_t* msg)
@@ -110,7 +112,14 @@ void informaState()
   // PRE: Res
   // POS: Informara del nou estat al usuari
 }
-
+void parpadea(){
+  //PRE: Res
+  //POS: Parpadeja la tira de LEDS: De moment només he posat un LED no se com fer una tira??
+ digitalWrite(LED, HIGH);
+ delay(500);
+ digitalWrite(LED, LOW);
+ delay(500);
+}
 void setState()
 {
   // PRE: Res
