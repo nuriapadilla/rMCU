@@ -36,7 +36,7 @@ void initCAN()
   // PRE: Res
   // POS: Initialitzar el CAN i amb cas d'error informar al usuari via un print
   mcp2515.reset();
-  mcp2515.setBitrate(CAN_125KBPS);
+  mcp2515.setBitrate(BAUDRATE);
   mcp2515.setNormalMode();
   if (ERROR){ //Que poso aqui!!!
     Serial.println("ERROR initCAN");
