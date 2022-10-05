@@ -1,4 +1,4 @@
-/*
+/*hola
  *    Requeriments rMCU v0.1
  * 
  * - Guardar a la SD els missatges de CAN
